@@ -1,0 +1,39 @@
+doctype 5
+html(lang="ru", manifest=manifest)
+	head
+		meta(charset="UTF-8")
+
+		title Developers Life
+
+		meta(name="description", content="developerslife.ru rss grabber")
+		meta(name="author", content="Marchenko Alexandr")
+
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="HandheldFriendly", content="True")
+		meta(name="MobileOptimized", content="320")
+		meta(http-equiv="cleartype", content="on")
+
+		link(rel="apple-touch-icon-precomposed", sizes="144x144", href="images/logo144.png")
+		link(rel="apple-touch-icon-precomposed", sizes="114x114", href="images/logo114.png")
+		link(rel="apple-touch-icon-precomposed", sizes="72x72", href="images/logo72.png")
+		link(rel="apple-touch-icon-precomposed", href="images/logo57.png")
+		link(rel="shortcut icon", type="image/png", href="images/favicon.png")
+
+		meta(name="msapplication-TileImage", content="images/logo144.png")
+		meta(name="msapplication-TileColor", content="#FFFFFF")
+
+		if debug
+			link(rel="stylesheet", href="stylesheets/styles.css")
+		else
+			link(rel="stylesheet", href="stylesheets/styles.min.css")
+
+	body
+		h1#title Title
+		p#pager 1 / 20
+
+		if debug
+			script(src="components/jquery/jquery.js")
+			script(src="components/jquery.touchwipe/jquery.touchwipe.js")
+			script(src="javascripts/main.js")
+		else
+			script(src="javascripts/scripts.min.js")
