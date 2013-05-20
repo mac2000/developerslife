@@ -1,4 +1,4 @@
-developerslife
+DevelopersLife
 ==============
 
 developerslife.ru rss grabber

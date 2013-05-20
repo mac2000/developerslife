@@ -17,7 +17,7 @@
 
 	function show(index) {
 		if(typeof items[index] === 'undefined') return;
-
+		window.location.hash = index + 1;
 		title.text(items[index].title);
 		preloader.attr('src', items[index].image);
 		image.css('background-image', 'url(images/logo.png)');
@@ -33,7 +33,7 @@
 					image: item.description.split('src="').pop().split('"').shift()
 				};
 			});
-			currentItemIndex = 0;
+			currentItemIndex = parseInt(window.location.hash.split('#').pop() || 1) - 1;
 			show(currentItemIndex);
 		});
 	}
